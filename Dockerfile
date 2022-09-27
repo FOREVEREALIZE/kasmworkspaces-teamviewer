@@ -12,6 +12,9 @@ WORKDIR $HOME
 RUN wget -O /tmp/teamviewer-installer.deb https://dl.teamviewer.com/download/linux/version_15x/teamviewer_15.34.4_arm64.deb
 RUN dpkg --force-all -i /tmp/teamviewer-installer.deb
 
+RUN echo "/usr/bin/desktop_ready && teamviewer &" > $STARTUPDIR/custom_startup.sh \
+&& chmod +x $STARTUPDIR/custom_startup.sh
+
 
 ######### End Customizations ###########
 
