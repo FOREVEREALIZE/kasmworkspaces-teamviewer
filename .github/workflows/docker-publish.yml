@@ -43,7 +43,7 @@ jobs:
         run: |        
           echo ::set-output name=docker_platform::${DOCKER_TARGET_PLATFORM}
           echo ::set-output name=docker_image::${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}        
-          echo ::set-output name=version::${{ GITHUB_RUN_NUMBER }}
+          echo ::set-output name=version::${{ github.run_number }}
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
       - name: Log into registry ${{ env.REGISTRY }}
