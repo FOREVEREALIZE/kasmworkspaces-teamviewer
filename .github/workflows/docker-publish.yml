@@ -41,7 +41,7 @@ jobs:
         if: success()      
         id: prepare      
         run: |        
-          echo ::set-output name=docker_platform::${{ DOCKER_TARGET_PLATFORM }}
+          echo ::set-output name=docker_platform::${DOCKER_TARGET_PLATFORM}
           echo ::set-output name=docker_image::${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}        
           echo ::set-output name=version::${{ GITHUB_RUN_NUMBER }}
       # Login against a Docker registry except on PR
