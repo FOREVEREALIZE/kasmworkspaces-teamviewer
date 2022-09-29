@@ -27,7 +27,7 @@ jobs:
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
     env:
-      DOCKER_TARGET_PLATFORM: linux/arm/v7
+      DOCKER_TARGET_PLATFORM: linux/arm64
 
     steps:
       - name: Checkout repository
